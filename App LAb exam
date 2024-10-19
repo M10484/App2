@@ -1,0 +1,340 @@
+// import 'package:flutter/material.dart';
+// import 'HomePage.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: LoginDemo(),
+//     ); // MaterialApp
+//   }
+// }
+//
+// class LoginDemo extends StatefulWidget {
+//   @override
+//   _LoginDemoState createState() => _LoginDemoState();
+// }
+//
+// class _LoginDemoState extends State<LoginDemo> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       appBar: AppBar(
+//         title: Text('Login Page'),
+//       ), // AppBar
+//       body: SingleChildScrollView(
+//         child: Column(
+//             children: <Widget>[
+//         Padding(
+//         padding: const EdgeInsets.only(top: 60.0),
+//         child: Center(
+//           child: Container(
+//             width: 200,
+//             height: 150,
+//             child: Image(
+//               image: AssetImage('example.jpg'),
+//             ),
+//           ),
+//         ),
+//       ),
+//       Padding(
+//         padding: EdgeInsets.symmetric(horizontal: 15),
+//         child: TextField(
+//           decoration: InputDecoration(
+//             border: OutlineInputBorder(),
+//             labelText: 'Email',
+//             hintText: 'Enter valid email',
+//           ), // InputDecoration
+//         ), // TextField
+//       ), // Padding
+//       Padding(
+//         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+//         child: TextField(
+//           obscureText: true,
+//           decoration: InputDecoration(
+//             border: OutlineInputBorder(),
+//             labelText: 'Password',
+//             hintText: 'Enter secure password',
+//           ), // InputDecoration
+//         ), // TextField
+//       ), //
+//
+//        Padding(
+//       padding: EdgeInsets.symmetric(horizontal: 15),
+//       child: ElevatedButton(
+//         onPressed: () {
+//
+//         },
+//         child: Text(
+//           'Forgot Password',
+//           style: TextStyle(color: Colors.blue, fontSize: 15),
+//         ),
+//       ),
+//     ),
+//     Padding(
+//     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+//     child: Container(
+//     height: 50,
+//     width: 250,
+//     decoration: BoxDecoration(
+//     color: Colors.blue,
+//     borderRadius: BorderRadius.circular(20),
+//     ), // BoxDecoration
+//     child: ElevatedButton(
+//     onPressed: () {
+//     Navigator.push(
+//     context,
+//     MaterialPageRoute(builder: (_) => HomePage()),
+//     );
+//     },
+//     child: Text(
+//     'Login',
+//     style: TextStyle(color: Colors.blue, fontSize: 25), // Chang
+//     ),
+//     ),
+//     ),
+//     ),
+//     SizedBox(
+//     height: 130,
+//     ), // SizedBox
+//     Padding(
+//     padding: EdgeInsets.symmetric(horizontal: 15),
+//     child: Text('New User? Create Account'),
+//     ),
+//     ],
+//     ),
+//     ),
+//     );
+//   }
+// }
+// import 'package:flutter/material.dart';
+//
+// class HomePage extends StatefulWidget {
+//   @override
+//   _HomePageState createState() => _HomePageState();
+// }
+//
+// class _HomePageState extends State<HomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Home Page'),
+//       ), // AppBar
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//           // Image Display
+//           Container(
+//           height: 150,
+//           width: 150,
+//           child: Image.asset('example.jpg'), // Replace with your image path
+//         ), // Container
+//         SizedBox(height: 20), // Space between Image and button
+//         // Welcome Button
+//         Container(
+//           height: 80,
+//           width: 150,
+//           decoration: BoxDecoration(
+//             color: Colors.blue,
+//             borderRadius: BorderRadius.circular(10),
+//           ),
+//
+//           child: ElevatedButton(
+//             onPressed: () {
+//               Navigator.pop(context);
+//             },
+//             style: ElevatedButton.styleFrom(
+//               backgroundColor: Colors.blue, // Background color
+//             ),
+//             child: Text(
+//               'Welcome, User!',
+//               style: TextStyle(
+//                 color: Colors.white, // Changed to white for better contrast
+//                 fontSize: 15,
+//               ), // TextStyle
+//             ), // Text
+//           ), // ElevatedButton
+//           SizedBox(height: 20), // Space after the welcome button
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+import 'package:flutter/material.dart';
+
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginDemo(),
+    ); // MaterialApp
+  }
+}
+
+class LoginDemo extends StatefulWidget {
+  @override
+  _LoginDemoState createState() => _LoginDemoState();
+}
+
+class _LoginDemoState extends State<LoginDemo> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Login Page'),
+      ), // AppBar
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 60.0),
+              child: Center(
+                child: Container(
+                  width: 200,
+                  height: 150,
+                  child: Image(
+                    image: AssetImage('assets/d.jpg'),
+                  ), // Image
+                ), // Container
+              ), // Center
+            ), // Padding
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Email',
+                  hintText: 'Enter valid email',
+                ), // InputDecoration
+              ), // TextField
+            ), // Padding
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
+                  hintText: 'Enter secure password',
+                ), // InputDecoration
+              ), // TextField
+            ), // Padding(
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 15),
+              child: ElevatedButton(
+                onPressed: () {
+                  //TODO: Navigate to Forgot Password Screen
+                },
+                child: Text(
+                  'Forgot Password',
+                  style: TextStyle(color: Colors.blue, fontSize: 13),
+                ), // Text
+              ), // ElevatedButton
+            ), // Padding
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              child: Container(
+                height: 50,
+                width: 150,
+                // decoration: BoxDecoration(
+                //   color: Colors.blue,
+                //   borderRadius: BorderRadius.circular(20),
+                // ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => HomePage()),
+                    );
+                  },
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.blue, fontSize: 23), // Chang
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 130,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Text('New User? Create Account'),
+            ), // Padding
+          ], // <Widget>[]
+        ), //Column
+      ), //SingleChildScrollView
+    ); // Scaffold
+  }
+}
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home Page'),
+      ), // AppBar
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            // Image Display
+            Container(
+              height: 150,
+              width: 150,
+              child: Image.asset('assets/picture.png'), // Replace with your image path
+            ), // Container
+            SizedBox(height: 20), // Space between Image and button
+            // Welcome Button
+            Container(
+              height: 80,
+              width: 150,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(10),
+              ), // BoxDecoration
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Background color
+                ),
+                child: Text(
+                  'Welcome, User!',
+                  style: TextStyle(
+                    color: Colors.white, // Changed to white for better contrast
+                    fontSize: 15,
+                  ), // TextStyle
+                ), // Text
+              ),
+            ) // ElevatedButton
+            // Space after the welcome button
+          ],
+        ),
+      ),
+    );
+  }
+}
